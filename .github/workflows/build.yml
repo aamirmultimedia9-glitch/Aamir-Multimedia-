@@ -26,12 +26,11 @@ jobs:
         with:
           channel: stable
 
-      - name: Install Flutter dependencies
-        run: flutter pub get
-
-              - name: Generate Android project files
+                - name: Generate Android project files
         run: flutter create . --platforms=android
 
+      - name: Install Flutter dependencies
+        run: flutter pub get 
       - name: Build Android APK
         run: flutter build apk --release
 
